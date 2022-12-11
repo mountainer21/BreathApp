@@ -8,18 +8,19 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.Navigation
 import com.bam.navigationexample.databinding.FragmentFirstBinding
+import com.bam.navigationexample.databinding.FragmentForthBinding
 import com.bam.navigationexample.databinding.FragmentSecondBinding
 
 
-class SecondFragment : Fragment() {
-    lateinit var binding: FragmentSecondBinding
+class ForthFragment : Fragment() {
+    lateinit var binding: FragmentForthBinding
     private var timer: CountDownTimer? = null
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        binding = FragmentSecondBinding.inflate(inflater)
+        binding = FragmentForthBinding.inflate(inflater)
         return binding.root
         return inflater.inflate(R.layout.fragment_second, container, false)
     }
@@ -28,13 +29,13 @@ class SecondFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-            binding.apply {
-                play?.setOnClickListener {
-                    startCountDownTimer(4000)
-                    binding.play?.text = "STOP"
-                }
+        binding.apply {
+            play?.setOnClickListener {
+                startCountDownTimer(4000)
+                binding.play?.text = "STOP"
             }
         }
+    }
 
     private fun startCountDownTimer(timeMills: Long) {
         timer?.cancel()
