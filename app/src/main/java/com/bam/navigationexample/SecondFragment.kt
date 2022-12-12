@@ -17,11 +17,11 @@ class SecondFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         // Inflate the layout for this fragment
         binding = FragmentSecondBinding.inflate(inflater)
         return binding.root
-        return inflater.inflate(R.layout.fragment_second, container, false)
+//        return inflater.inflate(R.layout.fragment_second, container, false)
     }
 
 
@@ -33,6 +33,10 @@ class SecondFragment : Fragment() {
                     startCountDownTimer(4000)
                     binding.play?.text = "STOP"
                 }
+            }
+                binding.homeView?.setOnClickListener {
+                    Navigation.findNavController(binding.root).navigate(R.id.action_secondFragment_to_menuFragment)
+
             }
         }
 

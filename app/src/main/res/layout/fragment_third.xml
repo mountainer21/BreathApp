@@ -21,14 +21,16 @@
         android:background="@drawable/circkle"
         android:backgroundTint="#543BB8C8"
         android:gravity="center"
-        android:text="Рекомендована для стабилизации нервной системы при панических атаках и стрессе. Сделайте глубокий вдох, мысленно считая до 4х. Задержите дыхание на 7 секунд. Выдохните через рот с шипящим звуком на 8 счетов."
+        android:text="Гимнастика для легких или дыхание огня позволяет достичь многих целей. Она используется для восстановления сил, наполнения энергией, очищения энергетических каналов, а также для стимуляции деятельности нервной системы.Упражнение подразумевает работу животом. Живот во время вдоха раскрывается, а на выдохе сильно вжимается. Вдохи могут быть длинными, но не чрезмерно, выдохи более короткими и резкими."
         android:textAppearance="@style/TextAppearance.AppCompat.Display4"
         android:textColor="@color/white"
-        android:textSize="28sp"
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
 
     <Button
         android:id="@+id/button"
@@ -52,7 +54,7 @@
         android:layout_marginEnd="46dp"
         android:layout_marginBottom="398dp"
         android:gravity="center"
-        android:text="Техника дыхания 4-7-8 "
+        android:text="Огненное дыхание 3/1"
         android:textAppearance="@style/TextAppearance.AppCompat.Display4"
         android:textColor="@color/white"
         android:textSize="32sp"

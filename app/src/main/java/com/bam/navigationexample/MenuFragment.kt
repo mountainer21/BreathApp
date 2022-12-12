@@ -6,28 +6,29 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.Navigation
-import com.bam.navigationexample.databinding.FragmentFirstBinding
-import com.bam.navigationexample.databinding.FragmentThirdBinding
+import com.bam.navigationexample.databinding.FragmentMenuBinding
 
 
-class ThirdFragment : Fragment() {
+class MenuFragment : Fragment() {
 
-    lateinit var binding: FragmentThirdBinding
-
+    lateinit var binding: FragmentMenuBinding
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        binding = FragmentThirdBinding.inflate(inflater)
+        binding = FragmentMenuBinding.inflate(inflater)
         return binding.root
     }
-
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.button.setOnClickListener {
-            Navigation.findNavController(binding.root).navigate(R.id.action_thirdFragment_to_forthFragment)
+        binding.buttonStress.setOnClickListener {
+            Navigation.findNavController(binding.root).navigate(R.id.action_menuFragment_to_firstFragment)
         }
+        binding.buttonTonus.setOnClickListener {
+            Navigation.findNavController(binding.root).navigate(R.id.action_menuFragment_to_thirdFragment)
+        }
+
     }
 }

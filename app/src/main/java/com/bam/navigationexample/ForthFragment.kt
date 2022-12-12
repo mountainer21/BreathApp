@@ -22,7 +22,7 @@ class ForthFragment : Fragment() {
         // Inflate the layout for this fragment
         binding = FragmentForthBinding.inflate(inflater)
         return binding.root
-        return inflater.inflate(R.layout.fragment_second, container, false)
+//        return inflater.inflate(R.layout.fragment_second, container, false)
     }
 
 
@@ -30,10 +30,14 @@ class ForthFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         binding.apply {
-            play?.setOnClickListener {
-                startCountDownTimer(4000)
-                binding.play?.text = "STOP"
+            play.setOnClickListener {
+                startCountDownTimer(3000)
+                binding.play.text = "STOP"
             }
+        }
+
+        binding.homeView.setOnClickListener {
+            Navigation.findNavController(binding.root).navigate(R.id.action_forthFragment_to_menuFragment)
         }
     }
 
@@ -42,17 +46,17 @@ class ForthFragment : Fragment() {
         timer = object : CountDownTimer(timeMills, 1) {
             override fun onTick(timeM: Long) {
                 binding.breathView.text = "ВДОХ"
-                binding.timerView?.text = ((timeM/1000)+1).toString()
+                binding.timerView.text = ((timeM/1000)+1).toString()
                 binding.apply {
-                    play?.setOnClickListener {
-                        binding.timerView?.text = "0"
+                    play.setOnClickListener {
+                        binding.timerView.text = "0"
                         binding.breathView.text = "ВДОХ"
                         timer?.cancel()
-                        binding.play?.text = "START"
+                        binding.play.text = "START"
                         binding.apply {
-                            play?.setOnClickListener {
-                                startCountDownTimer(4000)
-                                binding.play?.text = "STOP"
+                            play.setOnClickListener {
+                                startCountDownTimer(3000)
+                                binding.play.text = "STOP"
                             }
                         }
                     }
@@ -60,8 +64,8 @@ class ForthFragment : Fragment() {
             }
 
             override fun onFinish() {
-                binding.timerView?.text = "0"
-                startCountDownTimer2(7000)
+                binding.timerView.text = "0"
+                startCountDownTimer2(1000)
             }
 
         }.start()
@@ -72,28 +76,15 @@ class ForthFragment : Fragment() {
         timer?.cancel()
         timer = object : CountDownTimer(timeMills, 1) {
             override fun onTick(timeM: Long) {
-                binding.breathView.text = "СТОП"
-                binding.timerView?.text = ((timeM/1000)+1).toString()
-            }
-
-            override fun onFinish() {
-                binding.timerView?.text = "0"
-                startCountDownTimer3(8000)
-            }
-
-        }.start()
-    }
-    private fun startCountDownTimer3(timeMills: Long) {
-        timer?.cancel()
-        timer = object : CountDownTimer(timeMills, 1) {
-            override fun onTick(timeM: Long) {
                 binding.breathView.text = "ВЫДОХ"
-                binding.timerView?.text = ((timeM/1000)+1).toString()
+                binding.timerView.text = ((timeM/1000)+1).toString()
             }
+
             override fun onFinish() {
-                binding.timerView?.text = "0"
-                startCountDownTimer(4000)
+                binding.timerView.text = "0"
+                startCountDownTimer(3000)
             }
+
         }.start()
     }
 }
