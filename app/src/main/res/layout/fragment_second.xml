@@ -14,7 +14,7 @@
         android:id="@+id/breathView"
         android:layout_width="232dp"
         android:layout_height="0dp"
-        android:layout_marginTop="117dp"
+        android:layout_marginTop="95dp"
         android:layout_marginBottom="189dp"
         android:gravity="center"
         android:text="ВДОХ"
@@ -26,14 +26,26 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <Button
+        android:id="@+id/play"
+        android:layout_width="187dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="64dp"
+        android:text="START"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/floatHome"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/breathView" />
+
     <TextView
         android:id="@+id/timerView"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="52dp"
-        android:layout_marginTop="270dp"
+        android:layout_marginTop="255dp"
         android:layout_marginEnd="52dp"
-        android:layout_marginBottom="260dp"
+        android:layout_marginBottom="275dp"
         android:gravity="center"
         android:text="0"
         android:textColor="@color/white"
@@ -43,18 +55,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/play"
-        android:layout_width="187dp"
-        android:layout_height="0dp"
-        android:layout_marginBottom="43dp"
-        android:text="START"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toTopOf="@+id/floatHome"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/breathView" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/floatHome"
@@ -78,7 +78,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
-        android:layout_marginBottom="198dp"
+        android:layout_marginBottom="183dp"
         android:clickable="true"
         android:outlineSpotShadowColor="#00FFFFFF"
         android:src="@drawable/ic_baseline_arrow_back_ios_24"
