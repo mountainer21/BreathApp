@@ -13,62 +13,103 @@
     <TextView
         android:id="@+id/breathView"
         android:layout_width="232dp"
-        android:layout_height="94dp"
-        android:layout_marginTop="114dp"
-        android:layout_marginBottom="48dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="117dp"
+        android:layout_marginBottom="189dp"
         android:gravity="center"
         android:text="ВДОХ"
         android:textColor="@color/white"
         android:textSize="60sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/timerView"
+        app:layout_constraintBottom_toTopOf="@+id/play"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/timerView"
-        android:layout_width="305dp"
-        android:layout_height="132dp"
-        android:layout_marginStart="56dp"
-        android:layout_marginEnd="56dp"
-        android:layout_marginBottom="51dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="270dp"
+        android:layout_marginEnd="52dp"
+        android:layout_marginBottom="260dp"
         android:gravity="center"
         android:text="0"
         android:textColor="@color/white"
         android:textSize="96sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/play"
+        app:layout_constraintBottom_toTopOf="@+id/floatPause2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/breathView" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/play"
         android:layout_width="187dp"
-        android:layout_height="189dp"
-        android:layout_marginBottom="56dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="43dp"
         android:text="START"
         android:textSize="24sp"
-        app:layout_constraintBottom_toTopOf="@+id/homeView"
+        app:layout_constraintBottom_toTopOf="@+id/floatHome"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/timerView" />
+        app:layout_constraintTop_toBottomOf="@+id/breathView" />
 
-    <TextView
-        android:id="@+id/homeView"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="70dp"
-        android:layout_marginEnd="70dp"
-        android:layout_marginBottom="16dp"
-        android:gravity="center"
-        android:text="На главную"
-        android:textColor="@color/white"
-        android:textSize="24sp"
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatHome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="1dp"
+        android:layout_marginBottom="33dp"
+        android:clickable="true"
+        android:src="@drawable/ic_home"
+        app:backgroundTint="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/floatMusic"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/play"
+        app:layout_wrapBehaviorInParent="included" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="198dp"
+        android:clickable="true"
+        android:outlineSpotShadowColor="#00FFFFFF"
+        android:src="@drawable/ic_baseline_arrow_back_ios_24"
+        app:backgroundTint="#00FFFFFF"
+        app:layout_constraintBottom_toTopOf="@+id/timerView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatMusic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:src="@drawable/ic_music"
+        app:backgroundTint="@color/white"
+        app:layout_constraintEnd_toStartOf="@+id/floatPause2"
+        app:layout_constraintStart_toEndOf="@+id/floatHome"
+        app:layout_constraintTop_toTopOf="@+id/floatHome" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatPause2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="33dp"
+        android:clickable="true"
+        android:src="@drawable/ic_baseline_music_off_24"
+        app:backgroundTint="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/play" />
+        app:layout_constraintStart_toEndOf="@+id/floatMusic"
+        app:layout_constraintTop_toBottomOf="@+id/timerView" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -16,9 +16,6 @@
         <action
             android:id="@+id/action_menuFragment_to_thirdFragment"
             app:destination="@id/thirdFragment" />
-        <action
-            android:id="@+id/action_menuFragment_to_customFragment"
-            app:destination="@id/customFragment" />
     </fragment>
     <fragment
         android:id="@+id/firstFragment"
@@ -28,6 +25,9 @@
         <action
             android:id="@+id/action_firstFragment_to_secondFragment"
             app:destination="@id/secondFragment" />
+        <action
+            android:id="@+id/action_firstFragment_to_menuFragment"
+            app:destination="@id/menuFragment" />
     </fragment>
     <fragment
         android:id="@+id/secondFragment"
@@ -37,6 +37,9 @@
         <action
             android:id="@+id/action_secondFragment_to_menuFragment"
             app:destination="@id/menuFragment" />
+        <action
+            android:id="@+id/action_secondFragment_to_firstFragment"
+            app:destination="@id/firstFragment" />
     </fragment>
     <fragment
         android:id="@+id/thirdFragment"
@@ -46,6 +49,9 @@
         <action
             android:id="@+id/action_thirdFragment_to_forthFragment"
             app:destination="@id/forthFragment" />
+        <action
+            android:id="@+id/action_thirdFragment_to_menuFragment"
+            app:destination="@id/menuFragment" />
     </fragment>
     <fragment
         android:id="@+id/forthFragment"
@@ -55,10 +61,8 @@
         <action
             android:id="@+id/action_forthFragment_to_menuFragment"
             app:destination="@id/menuFragment" />
+        <action
+            android:id="@+id/action_forthFragment_to_thirdFragment"
+            app:destination="@id/thirdFragment" />
     </fragment>
-    <fragment
-        android:id="@+id/customFragment"
-        android:name="com.bam.navigationexample.CustomFragment"
-        android:label="fragment_custom"
-        tools:layout="@layout/fragment_custom" />
 </navigation>

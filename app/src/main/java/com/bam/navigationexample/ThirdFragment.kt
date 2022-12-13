@@ -29,5 +29,9 @@ class ThirdFragment : Fragment() {
         binding.button.setOnClickListener {
             Navigation.findNavController(binding.root).navigate(R.id.action_thirdFragment_to_forthFragment)
         }
+        binding.floatBack.setOnClickListener {
+            Navigation.findNavController(binding.root).navigate(R.id.action_thirdFragment_to_menuFragment)
+        }
+
     }
 }

@@ -5,10 +5,27 @@
     android:id="@+id/frameLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/frame_1"
+    android:background="@drawable/back_tonus"
     tools:context=".ThirdFragment">
 
     <!-- TODO: Update blank fragment layout -->
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/float_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="198dp"
+        android:clickable="true"
+        android:outlineAmbientShadowColor="#00FFFFFF"
+        android:outlineSpotShadowColor="#00FFFFFF"
+        android:src="@drawable/ic_baseline_arrow_back_ios_24"
+        app:backgroundTint="#00FFFFFF"
+        app:layout_constraintBottom_toTopOf="@+id/timerView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/textView"
@@ -19,7 +36,7 @@
         android:layout_marginEnd="12dp"
         android:layout_marginBottom="33dp"
         android:background="@drawable/circkle"
-        android:backgroundTint="#543BB8C8"
+        android:backgroundTint="#4DA1A83B"
         android:gravity="center"
         android:text="Гимнастика для легких или дыхание огня позволяет достичь многих целей. Она используется для восстановления сил, наполнения энергией, очищения энергетических каналов, а также для стимуляции деятельности нервной системы.Упражнение подразумевает работу животом. Живот во время вдоха раскрывается, а на выдохе сильно вжимается. Вдохи могут быть длинными, но не чрезмерно, выдохи более короткими и резкими."
         android:textAppearance="@style/TextAppearance.AppCompat.Display4"
@@ -37,6 +54,7 @@
         android:layout_width="164dp"
         android:layout_height="0dp"
         android:layout_marginBottom="42dp"
+        android:backgroundTint="#4FB55755"
         android:text="НАЧАТЬ"
         android:textColor="@color/white"
         android:textSize="20sp"
