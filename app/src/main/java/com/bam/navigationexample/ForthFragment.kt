@@ -49,9 +49,11 @@ class ForthFragment : Fragment() {
         }
 
         binding.floatHome.setOnClickListener {
+            playerPause()
             Navigation.findNavController(binding.root).navigate(R.id.action_forthFragment_to_menuFragment)
         }
         binding.floatBack.setOnClickListener {
+            playerPause()
             Navigation.findNavController(binding.root).navigate(R.id.action_forthFragment_to_thirdFragment)
         }
         binding.floatMusic.setOnClickListener {
@@ -70,14 +72,16 @@ class ForthFragment : Fragment() {
 //                Toast.makeText(this, "Audio started playing", Toast.LENGTH_SHORT).show()
             }
         binding.floatPause.setOnClickListener {
-            if(mediaPlayer!!.isPlaying) {
-                mediaPlayer!!.stop()
-                mediaPlayer!!.reset()
-                mediaPlayer!!.release()
-            }
+            playerPause()
         }
-
+    }
+    private fun playerPause() {
+        if(mediaPlayer!!.isPlaying) {
+            mediaPlayer!!.stop()
+            mediaPlayer!!.reset()
+            mediaPlayer!!.release()
         }
+    }
 
     private fun startCountDownTimer(timeMills: Long) {
         timer?.cancel()

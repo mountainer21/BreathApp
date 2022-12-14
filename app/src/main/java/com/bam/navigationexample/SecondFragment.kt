@@ -44,9 +44,11 @@ class SecondFragment : Fragment() {
                 }
             }
         binding.floatHome?.setOnClickListener {
+            playerPause()
             Navigation.findNavController(binding.root).navigate(R.id.action_secondFragment_to_menuFragment)
         }
         binding.floatBack?.setOnClickListener {
+            playerPause()
             Navigation.findNavController(binding.root).navigate(R.id.action_secondFragment_to_firstFragment)
         }
         binding.floatMusic?.setOnClickListener {
@@ -65,13 +67,17 @@ class SecondFragment : Fragment() {
 //                Toast.makeText(this, "Audio started playing", Toast.LENGTH_SHORT).show()
         }
         binding.floatPause2?.setOnClickListener {
-            if(mediaPlayer!!.isPlaying) {
-                mediaPlayer!!.stop()
-                mediaPlayer!!.reset()
-                mediaPlayer!!.release()
-            }
+            playerPause()
         }
 
+    }
+
+    private fun playerPause() {
+        if(mediaPlayer!!.isPlaying) {
+            mediaPlayer!!.stop()
+            mediaPlayer!!.reset()
+            mediaPlayer!!.release()
+        }
     }
 
     private fun startCountDownTimer(timeMills: Long) {

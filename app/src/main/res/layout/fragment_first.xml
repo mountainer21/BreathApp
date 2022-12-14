@@ -52,6 +52,7 @@
         android:layout_width="164dp"
         android:layout_height="0dp"
         android:layout_marginBottom="42dp"
+        android:backgroundTint="#027887"
         android:text="НАЧАТЬ"
         android:textColor="@color/white"
         android:textSize="20sp"
