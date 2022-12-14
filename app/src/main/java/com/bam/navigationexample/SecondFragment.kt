@@ -14,6 +14,7 @@ import com.bam.navigationexample.databinding.FragmentSecondBinding
 import java.io.IOException
 
 
+@Suppress("DEPRECATION")
 class SecondFragment : Fragment() {
     lateinit var binding: FragmentSecondBinding
     private var timer: CountDownTimer? = null

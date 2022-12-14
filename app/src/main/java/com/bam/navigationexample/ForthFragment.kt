@@ -17,6 +17,7 @@ import com.bam.navigationexample.databinding.FragmentSecondBinding
 import java.io.IOException
 
 
+@Suppress("DEPRECATION")
 class ForthFragment : Fragment() {
     var mediaPlayer: MediaPlayer? = null
 
