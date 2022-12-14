@@ -49,11 +49,11 @@ class ForthFragment : Fragment() {
         }
 
         binding.floatHome.setOnClickListener {
-            playerPause()
+//            playerPause()
             Navigation.findNavController(binding.root).navigate(R.id.action_forthFragment_to_menuFragment)
         }
         binding.floatBack.setOnClickListener {
-            playerPause()
+//            playerPause()
             Navigation.findNavController(binding.root).navigate(R.id.action_forthFragment_to_thirdFragment)
         }
         binding.floatMusic.setOnClickListener {

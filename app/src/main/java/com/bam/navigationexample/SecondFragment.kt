@@ -44,11 +44,11 @@ class SecondFragment : Fragment() {
                 }
             }
         binding.floatHome?.setOnClickListener {
-            playerPause()
+//            playerPause()
             Navigation.findNavController(binding.root).navigate(R.id.action_secondFragment_to_menuFragment)
         }
         binding.floatBack?.setOnClickListener {
-            playerPause()
+//            playerPause()
             Navigation.findNavController(binding.root).navigate(R.id.action_secondFragment_to_firstFragment)
         }
         binding.floatMusic?.setOnClickListener {
